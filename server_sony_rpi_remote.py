@@ -61,11 +61,12 @@ def release_control():
         font: 15px/25px 'Open Sans', sans-serif;
     }
     #content {
+        font: 15px/25px 'Open Sans', sans-serif;
         margin: 0px auto;
         text-align: center;
     }
     #btn {
-        width: 7em;  height: 2em;
+        width: 11em;  height: 2em;
         background: #3399ff;
         border-radius: 5px;
         color: #fff;
