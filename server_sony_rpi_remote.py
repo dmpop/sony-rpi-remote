@@ -42,28 +42,26 @@ def release_control():
     <p><input id="btn" class="warning" name="shutdown" value="Shutdown" type="submit" /></p>
     </form></div>
     <style>
-        body {
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    body {
         font: 15px/25px 'Open Sans', sans-serif;
-        }
-        #content {
+    }
+    #content {
         margin: 0px auto;
         text-align: center;
-        }
-        #btn {
-        width: 11em;  height: 2em;
-        background: rgb(66, 184, 221);
+    }
+    #btn {
+        width: 7em;  height: 2em;
+        background: #3399ff;
         border-radius: 5px;
         color: #fff;
-        font-family: 'Fira Sans', sans-serif;
-        font-size: 25px;
-        font-weight: 900;
-        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        font-family: 'Open Sans', sans-serif; font-size: 25px; font-weight: 900;
         letter-spacing: 3px;
         border:none;
-        }
-        #btn.warning {
-        background: rgb(223, 117, 20);
-        }
+    }
+    #btn.warning {
+        background: #cc0000;
+    }
     </style>
     """
 run(host="0.0.0.0",port=8080)
