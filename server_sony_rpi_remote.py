@@ -61,7 +61,12 @@ def release_control():
     <p><input id="btn" value="Start" type="submit" /></p>
     <p><input id="btn" class="stop" name="stop" value="Stop" type="submit" /></p>
     <p><input id="btn" class="shutdown" name="shutdown" value="Shutdown" type="submit" /></p>
-    </form></div>
+    </form>
+    <p>Press <strong>Shutter Release</strong> for a single shot.<br/>
+    Use the appropriate fields to specify the number of photos<br/>and the interval between them in seconds, then press <strong>Start</strong>.<br/>
+    Press <strong>Stop</strong> to terminate the app.<br/>
+    <p>Press <strong>Shutdown</strong> to shutdown Raspberry Pi.</p>
+    </div>
     <style>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
     body {
