@@ -20,6 +20,9 @@ from time import sleep
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
+#Turn the LED on pin 27 on (indicates that the server is up and running)
+GPIO.setup(27, GPIO.OUT)
+GPIO.output(27, True)
 
 def release():
     GPIO.setup(23, GPIO.OUT)
@@ -44,8 +47,11 @@ def release_control():
             release()
             time.sleep(interval)
             i = i + 1
+    if (request.POST.get("stop")):
+            GPIO.output(27, False)
+            os.system("killall -KILL python")
     if (request.POST.get("shutdown")):
-        os.system("sudo halt")
+            os.system("sudo halt")
     return """
     <title>SONY Raspberry Pi Remote</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,7 +59,8 @@ def release_control():
     <div id="content"><p><input id="btn" name="shutter_release" type="submit" value="Shutter Release"></p>
     <p>Photos: <input name="number" type="text" size="3"/> Interval: <input name="interval" type="text" size="3"/> sec.</p>
     <p><input id="btn" value="Start" type="submit" /></p>
-    <p><input id="btn" class="warning" name="shutdown" value="Shutdown" type="submit" /></p>
+    <p><input id="btn" class="stop" name="stop" value="Stop" type="submit" /></p>
+    <p><input id="btn" class="shutdown" name="shutdown" value="Shutdown" type="submit" /></p>
     </form></div>
     <style>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
@@ -74,7 +81,10 @@ def release_control():
         letter-spacing: 3px;
         border:none;
     }
-    #btn.warning {
+    #btn.stop {
+        background: #ff9900;
+    }
+    #btn.shutdown {
         background: #cc0000;
     }
     </style>
