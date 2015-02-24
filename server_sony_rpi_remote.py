@@ -53,7 +53,7 @@ def release_control():
     if (request.POST.get("shutdown")):
             os.system("sudo halt")
     return """
-    <title>SONY Raspberry Pi Remote</title>
+    <title>Sony Raspberry Pi Remote</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <form method="POST" action="/">
     <div id="content"><p><input id="btn" name="shutter_release" type="submit" value="Shutter Release"></p>
