@@ -57,7 +57,7 @@ def release_control():
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <form method="POST" action="/">
     <div id="content"><p><input id="btn" name="shutter_release" type="submit" value="Shutter Release"></p>
-    <p>Photos: <input name="number" type="text" size="3"/> Interval: <input name="interval" type="text" size="3"/> sec.</p>
+    <p class=right">Photos: <input name="number" type="text" size="3"/> Interval: <input name="interval" type="text" size="3"/> sec.</p>
     <p><input id="btn" name="start" value="Start" type="submit" /></p>
     <p><input id="btn" class="stop" name="stop" value="Stop" type="submit" /></p>
     <p><input id="btn" class="shutdown" name="shutdown" value="Shut down" type="submit" /></p>
@@ -72,10 +72,17 @@ def release_control():
     body {
         font: 15px/25px 'Open Sans', sans-serif;
     }
+    p.justify {
+        text-align: justify;
+    }
+    p.right {
+        text-align: right;
+    }
     #content {
         font: 15px/25px 'Open Sans', sans-serif;
         margin: 0px auto;
-        text-align: center;
+        width: 275px;
+        text-align: left;
     }
     #btn {
         width: 11em;  height: 2em;
