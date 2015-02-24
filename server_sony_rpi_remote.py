@@ -39,7 +39,7 @@ def release():
 def release_control():
     if (request.POST.get("shutter_release")):
         release()
-    if (request.POST.get("number")):
+    if (request.POST.get("start")):
         i = 1
         number = int(request.forms.get('number'))
         interval = int(request.forms.get('interval'))
@@ -58,7 +58,7 @@ def release_control():
     <form method="POST" action="/">
     <div id="content"><p><input id="btn" name="shutter_release" type="submit" value="Shutter Release"></p>
     <p>Photos: <input name="number" type="text" size="3"/> Interval: <input name="interval" type="text" size="3"/> sec.</p>
-    <p><input id="btn" value="Start" type="submit" /></p>
+    <p><input id="btn" name="start" value="Start" type="submit" /></p>
     <p><input id="btn" class="stop" name="stop" value="Stop" type="submit" /></p>
     <p><input id="btn" class="shutdown" name="shutdown" value="Shut down" type="submit" /></p>
     </form>
