@@ -72,8 +72,11 @@ def release_control():
     body {
         font: 15px/25px 'Open Sans', sans-serif;
     }
-    p.justify {
-        text-align: justify;
+    p.left {
+        text-align: left;
+    }
+    p.right {
+        text-align: right;
     }
     #content {
         font: 15px/25px 'Open Sans', sans-serif;
