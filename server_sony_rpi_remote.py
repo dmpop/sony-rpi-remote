@@ -62,10 +62,10 @@ def release_control():
     <p><input id="btn" class="stop" name="stop" value="Stop" type="submit" /></p>
     <p><input id="btn" class="shutdown" name="shutdown" value="Shut down" type="submit" /></p>
     </form>
-    <p class="justify">Press <strong>Shutter Release</strong> for a single shot.</p>
-    <p class="justify">Use the appropriate fields to specify the number of photos and the interval between them in seconds, then press <strong>Start</strong>.</p>
-    <p class="justify">Press <strong>Stop</strong> to terminate the app.</p>
-    <p class="justify">Press <strong>Shutdown</strong> to shut down Raspberry Pi.</p>
+    <p class="left">Press <strong>Shutter Release</strong> for a single shot.</p>
+    <p class="left">Use the appropriate fields to specify the number of photos and the interval between them in seconds, then press <strong>Start</strong>.</p>
+    <p class="left">Press <strong>Stop</strong> to terminate the app.</p>
+    <p class="left">Press <strong>Shutdown</strong> to shut down Raspberry Pi.</p>
     </div>
     <style>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
@@ -74,9 +74,6 @@ def release_control():
     }
     p.justify {
         text-align: justify;
-    }
-    p.right {
-        text-align: right;
     }
     #content {
         font: 15px/25px 'Open Sans', sans-serif;
