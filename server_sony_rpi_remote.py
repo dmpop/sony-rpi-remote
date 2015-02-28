@@ -58,8 +58,8 @@ def release_control():
     <form method="POST" action="/">
     <div id="content"><p><input id="btn" name="shutter_release" type="submit" value="Shutter Release"></p>
     <p class=right">Photos: <input name="number" type="text" size="3"/> Interval: <input name="interval" type="text" size="3"/> sec.</p>
-    <p><input id="btn" name="start" value="Start" type="submit" /></p>
-    <p><input id="btn" class="stop" name="stop" value="Stop" type="submit" /></p>
+    <p><input id="btn" name="orange" value="Start" type="submit" /></p>
+    <p><input id="btn" class="red" name="stop" value="Stop" type="submit" /></p>
     <p><input id="btn" class="shutdown" name="shutdown" value="Shut down" type="submit" /></p>
     </form>
     <p class="left">Press <strong>Shutter Release</strong> for a single shot.</p>
@@ -93,10 +93,10 @@ def release_control():
         letter-spacing: 3px;
         border:none;
     }
-    #btn.stop {
+    #btn.orange {
         background: #ff9900;
     }
-    #btn.shutdown {
+    #btn.red {
         background: #cc0000;
     }
     </style>
